@@ -1,5 +1,5 @@
 import Joke from '../joke';
 
-const ChuckJoke: React.FC<Joke> = ({id, joke}) => <p>{id}. {joke}</p>
+const ChuckJoke: React.FC<Joke> = ({joke}) => <p>{joke}</p>;
 
 export default ChuckJoke;
