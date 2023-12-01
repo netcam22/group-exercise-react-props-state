@@ -1,4 +1,8 @@
-const ChuckInfo = () => {
+interface ChuckInfoProps {
+	noOfWhales: number;
+}
+
+const ChuckInfo: React.FC<ChuckInfoProps> = ({noOfWhales}) => {
 
 	// 💡 Note that this component, like the <ChuckCard />, uses an "explicit return"
 	// Compare this to <ChuckJoke/> which just returns the JSX directly like this:
@@ -17,7 +21,7 @@ const ChuckInfo = () => {
 
 	return (
 		<>
-			<p>Number of Whales Saved: </p>
+			<p>Number of Whales Saved: {noOfWhales}</p>
 
 			<p>Number of Round House Kicks (in the last day): </p>
 		</>);
