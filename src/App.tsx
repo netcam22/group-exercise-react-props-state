@@ -26,7 +26,8 @@ function App() {
 		"id": 4,
 		"joke": "Chuck Norris does not own a stove, oven, or microwave, because revenge is a dish best served cold.",
 	}])
-
+	
+	const jokeThree = jokes.find((joke: Joke)=> joke.id === 3);
 	return (
 		<div className="App">
 
@@ -37,8 +38,10 @@ function App() {
 			<ChuckInfo noOfWhales = {whalesSaved} noOfKicks={roundHouseKicks} />
 
 			<h2>Jokes: </h2>
-			
 			{jokes.map((myJoke: Joke) => <div key = {myJoke.id}><ChuckJoke id = {myJoke.id} joke = {myJoke.joke} /></div>)}
+
+			<h2>Filtered Jokes: </h2>
+			{jokeThree? <ChuckJoke id = {jokeThree.id} joke = {jokeThree.joke} />: <p>no matches</p>}
 
 		</div>
 	);
