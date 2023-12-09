@@ -38,7 +38,7 @@ function App() {
 			<ChuckInfo noOfWhales = {whalesSaved} noOfKicks={roundHouseKicks} />
 
 			<h2>Jokes: </h2>
-			{jokes.map((myJoke: Joke) => <ChuckJoke id = {myJoke.id} key = {(myJoke.id.toString())} joke = {myJoke.joke} />)}
+			{jokes.map((j: Joke) => <ChuckJoke id = {j.id} key = {(j.id.toString())} joke = {j.joke} />)}
 
 			<h2>Filtered Jokes: </h2>
 			{jokeThree? <ChuckJoke id = {jokeThree.id} key = {(jokeThree.id.toString())} joke = {jokeThree.joke} />: <p>no matches</p>}
